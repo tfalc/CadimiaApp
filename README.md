@@ -13,7 +13,8 @@ ALUNO ||--o{ MATRICULA : cadastra
         AvaliacaoFisica avaliacaoFisica
 }
 
-ALUNO ||--|{ AVALIACAO FISICA : realiza { 
+ALUNO ||--|{ AVALIACAO FISICA : realiza 
+    AVALIACAO FISICA{ 
     Long id
     Aluno aluno
     LocalDateTime dataAvaliacao
