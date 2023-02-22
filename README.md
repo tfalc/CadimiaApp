@@ -1,6 +1,6 @@
 # CadimiaApp
 
-```erDiagram 
+```mermaid
 ---
 title: GymEntityRelationship
 ---
@@ -26,10 +26,10 @@ int quantity
 float pricePerUnit }```
 ```
 
-```classDiagram
-Animal <|-- Duck
-Animal <|-- Fish
-Animal <|-- Zebra
-Animal : +int age
-Animal : +String gender
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
