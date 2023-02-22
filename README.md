@@ -1,4 +1,4 @@
-# CadimiaApp
+# CadimíaApp
 
 ---
 
@@ -11,28 +11,28 @@ ER DIAGRAM for the Gym App
 ```mermaid
 erDiagram
 
-ALUNO ||--o{ MATRICULA : cadastra
-    ALUNO { 
+CLIENT ||--o{ REGISTRATION : register
+    CLIENT { 
         Long id
-        String nome
+        String name
         String cpf
-        String bairro
-        LocalDate dataDeNascimento
-        AvaliacaoFisica avaliacaoFisica
+        String neighbor
+        LocalDate birthDate
+        AvaliacaoFisica physicalAvaliation
 }
 
-ALUNO ||--o{ AVALIACAO_FISICA : realiza 
-    AVALIACAO_FISICA { 
+CLIENT ||--o{ PHYSICAL_ASSESMENT : do
+    PHYSICAL_ASSESMENT { 
         Long id
-        Aluno aluno
-        LocalDateTime dataAvaliacao
-        double peso
-        double altura
+        Client client
+        LocalDateTime evaluationDate
+        double weight
+        double height
  }
  
-MATRICULA {
+REGISTRATION {
     Long id
-    Aluno aluno
-    LocalDateTime dataMatricula
+    Client client
+    LocalDateTime registrationDate
 }
 ```
