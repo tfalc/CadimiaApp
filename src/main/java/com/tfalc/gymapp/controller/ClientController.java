@@ -18,8 +18,8 @@ public class ClientController {
     private ClientServiceImpl clientService;
 
     @GetMapping
-    public List<ClientEntity> getAll() {
-        return clientService.getAll();
+    public List<ClientEntity> getAll(@RequestParam(value = "birthDate", required = false) String birthDate) {
+        return clientService.getAll(birthDate);
     }
 
     @PostMapping

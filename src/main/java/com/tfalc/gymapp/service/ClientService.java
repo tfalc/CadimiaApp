@@ -26,9 +26,8 @@ public interface ClientService {
      * Returns all clients in the database
      * @return Uma lista os Alunos que estão salvas no DB.
      */
-    List<ClientEntity> getAll(String dataDeNascimento);
 
-    List<ClientEntity> getAll();
+    List<ClientEntity> getAll(String birthDate);
 
     /**
      * Update client
