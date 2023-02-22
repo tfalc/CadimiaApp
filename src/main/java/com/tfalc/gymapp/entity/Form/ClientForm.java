@@ -15,19 +15,19 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ClientForm {
-    @NotEmpty(message = "Preencha o campo corretamente.")
-    @Size(min = 3, max =50, message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
+    @NotEmpty(message = "Field can't be empty.")
+    @Size(min = 3, max =50, message = "'${validatedValue}' must be between {min} and {max} characters.")
     private String name;
 
-    @NotEmpty(message = "Preencha o campo corretamente.")
-    @CPF(message = "'${validatedValue}' é inválido!")
+    @NotEmpty(message = "Field can't be empty.")
+    @CPF(message = "'${validatedValue}' is not valid!")
     private String cpf;
 
-    @NotEmpty(message = "Preencha o campo corretamente.")
-    @Size(min = 3, max =50, message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
+    @NotEmpty(message = "Field can't be empty.")
+    @Size(min = 3, max =50, message = "'${validatedValue}' must be between {min} and {max} characters.")
     private String street;
 
-    @NotNull(message = "Prencha o campo corretamente.")
-    @Past(message = "Data '${validatedValue}' é inválida.")
+    @NotNull(message = "Field can't be empty.")
+    @Past(message = "Date '${validatedValue}' is invalid.")
     private LocalDate birthDate;
 }

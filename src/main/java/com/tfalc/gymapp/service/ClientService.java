@@ -16,39 +16,37 @@ public interface ClientService {
     ClientEntity create(ClientForm form);
 
     /**
-     * Retorna um Aluno que está no banco de dados de acordo com seu Id.
-     * @param id id do Aluno que será exibido.
-     * @return Aluno de acordo com o Id fornecido.
+     * Returns one client by its id
+     * @param id client's id
+     * @return Client according to id.
      */
     ClientEntity get(Long id);
 
     /**
-     * Retorna os Alunos que estão no banco de dados.
+     * Returns all clients in the database
      * @return Uma lista os Alunos que estão salvas no DB.
      */
-    List<ClientEntity> getAll(String dataDeNascimento);
 
-    List<ClientEntity> getAll();
+    List<ClientEntity> getAll(String birthDate);
 
     /**
-     * Atualiza o Aluno.
-     * @param id id do Aluno que será atualizado.
-     * @param formUpdate formulário referente aos dados necessários para atualização do Aluno
-     * no banco de dados.
-     * @return Aluno recém-atualizado.
+     * Update client
+     * @param id client's id
+     * @param formUpdate form used to update client's data
+     * @return Recently updated client.
      */
     ClientEntity update(Long id, ClientUpdateForm formUpdate);
 
     /**
-     * Deleta um Aluno específico.
-     * @param id id do Aluno que será removido.
+     * Deletes a specified client.
+     * @param id client's id to remove from database.
      */
     void delete(Long id);
 
     /**
      *
-     * @param id id do aluno que será recuperada a lista de avaliações
-     * @return uma lista com todas as avaliações do aluno de acordo com o Id
+     * @param id client's id to recover it's assessments
+     * @return a list with all client's assessments
      */
     List<PhysicalAssessment> getAllPhysicalAssessment(Long id);
 

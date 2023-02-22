@@ -7,9 +7,11 @@ import com.tfalc.gymapp.entity.PhysicalAssessment;
 import com.tfalc.gymapp.repository.ClientRepository;
 import com.tfalc.gymapp.repository.PhysicalAssessmentRepository;
 import com.tfalc.gymapp.service.ClientService;
+import com.tfalc.gymapp.utils.JavaTimeUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -38,13 +40,13 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    public List<ClientEntity> getAll(String dataDeNascimento) {
-        return null;
-    }
-
-    @Override
-    public List<ClientEntity> getAll(){
-        return clientRepository.findAll();
+    public List<ClientEntity> getAll(String birthDate) {
+        if(birthDate == null) {
+            return clientRepository.findAll();
+        } else{
+            LocalDate localDate = LocalDate.parse(birthDate, JavaTimeUtil.LOCAL_DATE_FORMATTER);
+            return clientRepository.findByBirthDate(localDate);
+        }
     }
 
     @Override

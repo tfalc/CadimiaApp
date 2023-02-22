@@ -27,7 +27,6 @@ public class ClientEntity {
     private String name;
 
     @Column(unique = true)
-    @CPF
     private String cpf;
 
     private String street;
