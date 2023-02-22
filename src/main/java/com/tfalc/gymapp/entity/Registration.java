@@ -20,7 +20,7 @@ public class Registration {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id")
-    private ClientEntity clientEntity;
+    private ClientEntity client;
 
     private LocalDateTime registrationDate = LocalDateTime.now();
 }

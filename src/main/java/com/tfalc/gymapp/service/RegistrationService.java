@@ -25,7 +25,7 @@ public interface RegistrationService {
      * Returns all registration in database
      * @return - a list of registration
      */
-    List<Registration> getAll(String bairro);
+    List<Registration> getAll();
 
     /**
      * Delete a specific registration
