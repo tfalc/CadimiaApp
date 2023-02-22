@@ -14,12 +14,16 @@ ALUNO ||--o{ MATRICULA : cadastra
 }
 
 ALUNO ||--|{ AVALIACAO FISICA { 
-    int orderNumber 
-    string deliveryAddress
+    Long id
+    Aluno aluno
+    LocalDateTime dataAvaliacao
+    double peso
+    double altura
  }
  
-MATRICULA { 
-string productCode 
-int quantity 
-float pricePerUnit }
+MATRICULA {
+    Long id
+    Aluno aluno
+    LocalDateTime dataMatricula
+}
 ```
