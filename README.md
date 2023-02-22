@@ -2,7 +2,7 @@
 
 ## Presentation
 
-This is a Java App to be used by gym establishments. It will let the user register a new clientEntity, organize physical assessments for this clientEntity and use the registration date to persist data.
+This is a Java App to be used by gym establishments. It will let the user register a new client, organize physical assessments for this client and use the registration date to persist data.
 
 
 
@@ -28,7 +28,7 @@ CLIENT ||--o{ REGISTRATION : register
 CLIENT ||--o{ PHYSICAL_ASSESSMENT : do
     PHYSICAL_ASSESSMENT { 
         Long id
-        Client clientEntity
+        Client client
         LocalDateTime evaluationDate
         double weight
         double height
@@ -36,7 +36,7 @@ CLIENT ||--o{ PHYSICAL_ASSESSMENT : do
  
 REGISTRATION {
     Long id
-    Client clientEntity
+    Client client
     LocalDateTime registrationDate
 }
 
