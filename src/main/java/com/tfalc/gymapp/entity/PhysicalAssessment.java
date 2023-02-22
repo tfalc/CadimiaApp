@@ -19,7 +19,7 @@ public class PhysicalAssessment {
     private Long id;
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "client_id")
-    private Client client;
+    private ClientEntity clientEntity;
     private LocalDateTime evaluationDate = LocalDateTime.now();
 
     @Column(name = "actual_weight")
