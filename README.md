@@ -1,7 +1,7 @@
 # CadimiaApp
 
 ```mermaid
-erDiagram gym;
+erDiagram gym
 
 ALUNO ||--o{ MATRICULA : cadastra
     ALUNO { 
