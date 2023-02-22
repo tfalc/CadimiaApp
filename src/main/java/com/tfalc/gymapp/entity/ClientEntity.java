@@ -18,7 +18,7 @@ import java.util.List;
 @Entity
 @Table(name = "tb_client")
 @JsonIgnoreProperties({"hibernate.LazyInitializer", "handler"})
-public class Client {
+public class ClientEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class Client {
 
     private LocalDate birthDate;
 
-    @OneToMany(mappedBy = "client", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "clientEntity", fetch = FetchType.LAZY)
     @JsonIgnore
     private List<PhysicalAssessment> physicalAssessmentList = new ArrayList<>();
 }
