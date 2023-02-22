@@ -9,37 +9,36 @@ import java.util.List;
 
 public interface PhysicalAssessmentService {
     /**
-     * Cria uma Avaliação Física e salva no banco de dados.
-     * @param form - formulário referente aos dados para criação da Avaliação Física no banco de dados.
-     * @return - Avaliação Física recém-criada.
+     * Create a physical assessment and save it to the database
+     * @param form - refers to the data to be saved
+     * @return - The saved assessment.
      */
     PhysicalAssessment create(PhysicalAssessmentForm form);
 
     /**
-     * Retorna uma Avaliação Física que está no banco de dados de acordo com seu Id.
-     * @param id - id da Avaliação Física que será exibida.
-     * @return - Avaliação Física de acordo com o Id fornecido.
+     * Returns a pyhysical assessment found in the database by its id
+     * @param id - Physical Assessment id
+     * @return - Physical assessment according to id
      */
     PhysicalAssessment get(Long id);
 
     /**
-     * Retorna todas as Avaliações Física que estão no banco de dados.
-     * @return - Uma lista com todas as Avaliações Física que estão salvas no DB.
+     * Returns all physical assessment in the database
+     * @return - A list of all Physical assesment saved in the database
      */
     List<PhysicalAssessment> getAll();
 
     /**
-     * Atualiza a avaliação física.
-     * @param id - id da Avaliação Física que será atualizada.
-     * @param formUpdate - formulário referente aos dados necessários para atualização da Avaliação
-     * Física no banco de dados.
-     * @return - Avaliação Física recém-atualizada.
+     * Updates a physical assessment
+     * @param id - Physical Assessment id
+     * @param formUpdate - Form to update the assessment
+     * @return - The updated Physical assessment
      */
     PhysicalAssessment update(Long id, PhysicalAssessmentUpdateForm formUpdate);
 
     /**
-     * Deleta uma Avaliação Física específica.
-     * @param id - id da Avaliação Física que será removida.
+     * Delete a physical assessment by its id
+     * @param id - Physical assessment id
      */
     void delete(Long id);
 }
