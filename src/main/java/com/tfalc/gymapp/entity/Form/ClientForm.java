@@ -20,7 +20,7 @@ public class ClientForm {
     private String name;
 
     @NotEmpty(message = "Field can't be empty.")
-    @CPF(message = "'${validatedValue}' é inválido!")
+    @CPF(message = "'${validatedValue}' is not valid!")
     private String cpf;
 
     @NotEmpty(message = "Field can't be empty.")

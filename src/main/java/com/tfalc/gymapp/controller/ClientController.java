@@ -4,6 +4,7 @@ import com.tfalc.gymapp.entity.ClientEntity;
 import com.tfalc.gymapp.entity.Form.ClientForm;
 import com.tfalc.gymapp.entity.PhysicalAssessment;
 import com.tfalc.gymapp.service.impl.ClientServiceImpl;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,17 +18,17 @@ public class ClientController {
     private ClientServiceImpl clientService;
 
     @GetMapping
-    public List<ClientEntity> getAll(){
+    public List<ClientEntity> getAll() {
         return clientService.getAll();
     }
 
     @PostMapping
-    public ClientEntity createClient(@RequestBody ClientForm clientForm){
+    public ClientEntity createClient(@Valid @RequestBody ClientForm clientForm) {
         return clientService.create(clientForm);
     }
 
     @GetMapping("/assessment/{id}")
-    public List<PhysicalAssessment> getAllPhysicalAssessment(@PathVariable Long id){
+    public List<PhysicalAssessment> getAllPhysicalAssessment(@PathVariable Long id) {
         return clientService.getAllPhysicalAssessment(id);
     }
 }

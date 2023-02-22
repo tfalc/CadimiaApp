@@ -17,12 +17,12 @@ public class RegistrationController {
     private RegistrationService registrationService;
 
     @PostMapping
-    public Registration create(@Valid @RequestBody RegistrationForm registration){
+    public Registration create(@Valid @RequestBody RegistrationForm registration) {
         return registrationService.create(registration);
     }
 
     @GetMapping
-    public List<Registration> getAll(){
+    public List<Registration> getAll() {
         return registrationService.getAll();
     }
 }
